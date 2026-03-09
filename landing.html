@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RailTec 智能轨道与工业通信解决方案</title>
+    <meta name="description" content="RailTec 提供轨道交通通信、智能监测、工业网络安全与一体化运维平台，助力城市轨道与工业场景数字化升级。" />
+    <style>
+      :root {
+        --bg: #070b16;
+        --bg-soft: #0f172a;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --primary: #06b6d4;
+        --secondary: #6366f1;
+        --line: rgba(148, 163, 184, 0.22);
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body { margin: 0; padding: 0; }
+
+      body {
+        font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 5% 5%, rgba(99, 102, 241, 0.25), transparent 38%),
+          radial-gradient(circle at 95% 10%, rgba(6, 182, 212, 0.20), transparent 35%),
+          var(--bg);
+        line-height: 1.65;
+      }
+
+      a { color: inherit; }
+
+      .container { width: min(1180px, 92vw); margin: 0 auto; }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(7, 11, 22, 0.65);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-inner {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand { font-size: 22px; font-weight: 800; letter-spacing: .5px; }
+      .brand span { color: var(--primary); }
+
+      .nav-links { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+
+      .hero {
+        padding: 88px 0 72px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 34px;
+        align-items: center;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        color: #c4b5fd;
+        border: 1px solid rgba(196, 181, 253, 0.45);
+        border-radius: 999px;
+        padding: 6px 12px;
+      }
+
+      h1 {
+        margin: 14px 0 18px;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1.08;
+      }
+
+      .hero p { margin: 0 0 26px; color: var(--muted); max-width: 620px; }
+
+      .btn-group { display: flex; flex-wrap: wrap; gap: 12px; }
+
+      .btn {
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 12px;
+        font-weight: 700;
+      }
+
+      .btn.primary {
+        color: #031018;
+        background: linear-gradient(120deg, var(--primary), #67e8f9);
+      }
+
+      .btn.secondary {
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+
+      .panel {
+        background: linear-gradient(165deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.58));
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35);
+      }
+
+      .kpi-grid {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .kpi { background: rgba(15, 23, 42, 0.65); border-radius: 12px; padding: 14px; border: 1px solid var(--line); }
+      .kpi b { display: block; font-size: 24px; margin-bottom: 4px; }
+      .kpi small { color: var(--muted); font-size: 12px; }
+
+      .section { padding: 30px 0 66px; }
+      .section h2 { font-size: 30px; margin: 0 0 10px; }
+      .lead { margin: 0 0 24px; color: var(--muted); }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 12px;
+        background: linear-gradient(135deg, rgba(6, 182, 212, 0.22), rgba(99, 102, 241, 0.24));
+        border: 1px solid rgba(148, 163, 184, 0.32);
+      }
+
+      .card h3 { margin: 0 0 8px; font-size: 20px; }
+      .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .about ul { margin: 10px 0 0 0; padding-left: 20px; color: var(--muted); }
+      .about li { margin-bottom: 8px; }
+
+      footer {
+        border-top: 1px solid var(--line);
+        color: #9ca3af;
+        padding: 26px 0 44px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 980px) {
+        .hero, .products, .about { grid-template-columns: 1fr; }
+        .nav-links { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <div class="brand">Rail<span>Tec</span></div>
+        <div class="nav-links">
+          <a href="#products">产品</a>
+          <a href="#about">介绍</a>
+          <a href="#contact">联系</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="container hero">
+      <div>
+        <span class="tag">轨道交通 · 工业通信 · 数字化运维</span>
+        <h1>面向轨道与工业场景的
+          <br />现代化产品平台</h1>
+        <p>
+          我们围绕“设备接入、网络传输、智能监测、运维决策”打造全栈产品，帮助客户构建更安全、稳定、可持续演进的数字化基础设施。
+        </p>
+        <div class="btn-group">
+          <a class="btn primary" href="#products">查看产品矩阵</a>
+          <a class="btn secondary" href="#about">了解公司能力</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 style="margin:0 0 8px;">核心能力概览</h3>
+        <p style="margin:0;color:var(--muted);font-size:14px;">以工程落地为核心，形成从方案设计到运维运营的闭环。</p>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <b>7 × 24</b>
+            <small>全天候运行保障</small>
+          </div>
+          <div class="kpi">
+            <b>99.99%</b>
+            <small>关键链路可用性目标</small>
+          </div>
+          <div class="kpi">
+            <b>多协议</b>
+            <small>兼容主流工业与轨交标准</small>
+          </div>
+          <div class="kpi">
+            <b>全生命周期</b>
+            <small>建设、运维、优化一体化</small>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="products" class="section">
+        <h2>产品矩阵</h2>
+        <p class="lead">覆盖轨道通信、智能感知与工业安全三大方向，支持模块化部署与按需扩展。</p>
+        <div class="products">
+          <article class="card">
+            <div class="icon">🚆</div>
+            <h3>轨道通信系统</h3>
+            <p>提供列车-地面通信、车站网络与控制中心互联方案，提升传输稳定性与业务连续性。</p>
+          </article>
+          <article class="card">
+            <div class="icon">📡</div>
+            <h3>智能监测平台</h3>
+            <p>面向关键设备状态监测与告警联动，支持可视化大屏、趋势分析与预测性维护策略。</p>
+          </article>
+          <article class="card">
+            <div class="icon">🛡️</div>
+            <h3>工业网络安全网关</h3>
+            <p>针对工业控制网络提供访问隔离、流量审计与安全策略编排，满足分区分域防护要求。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>产品介绍与服务能力</h2>
+        <div class="about">
+          <div class="card">
+            <h3>为什么选择 RailTec</h3>
+            <ul>
+              <li>行业经验沉淀：长期服务轨道交通与工业客户场景。</li>
+              <li>方案可落地：注重工程实施细节，减少交付风险。</li>
+              <li>平台可扩展：支持分阶段建设，兼顾当前需求和未来升级。</li>
+            </ul>
+          </div>
+          <div class="card" id="contact">
+            <h3>合作流程</h3>
+            <ul>
+              <li>需求评估：梳理业务目标、现网情况与关键约束。</li>
+              <li>方案设计：输出架构方案、实施计划与里程碑。</li>
+              <li>上线交付：联调测试、验收交付与运维培训。</li>
+              <li>持续优化：基于运行数据进行迭代优化和扩容建议。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 RailTec. 现代化轨道与工业数字化产品宣传页（演示站点）。</div>
+    </footer>
+  </body>
+</html>
