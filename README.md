@@ -25,7 +25,7 @@ npm i -g yarn
 ### Step 2: 下载脚本源代码
 先用 git clone 源代码到本地
 ```bash
-git clone https://github.com/sfter/evm-inscription-mint.git
+git clone https://github.com/Sybx11/evm-inscription-mint.git
 
 cd evm-inscription-mint
 ```
